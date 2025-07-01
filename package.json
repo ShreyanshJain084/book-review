@@ -22,7 +22,7 @@
     "migration:run": "ts-node-esm ./node_modules/typeorm/cli.js migration:run -d ./data-source.ts"
   },
   "dependencies": {
-    "@nestjs-modules/ioredis": "^2.0.2",
+    "@nestjs-modules/ioredis": "^1.1.1",
     "@nestjs/common": "^11.0.1",
     "@nestjs/config": "^4.0.2",
     "@nestjs/core": "^11.0.1",
@@ -46,6 +46,7 @@
     "@swc/cli": "^0.6.0",
     "@swc/core": "^1.10.7",
     "@types/express": "^5.0.0",
+    "@types/ioredis": "^5.0.0",
     "@types/jest": "^29.5.14",
     "@types/node": "^22.10.7",
     "@types/supertest": "^6.0.2",

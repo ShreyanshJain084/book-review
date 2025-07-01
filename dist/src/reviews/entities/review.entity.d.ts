@@ -5,5 +5,6 @@ export declare class Review {
     reviewText: string;
     rating: number;
     createdAt: Date;
+    bookId: number;
     book: Book;
 }

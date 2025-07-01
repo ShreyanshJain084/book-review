@@ -16,9 +16,11 @@ exports.RedisModule = RedisModule = __decorate([
     (0, common_1.Module)({
         imports: [
             ioredis_1.RedisModule.forRoot({
-                host: 'localhost',
-                port: 6379,
-                retryStrategy: times => Math.min(times * 50, 2000),
+                config: {
+                    host: 'localhost',
+                    port: 6379,
+                    retryStrategy: times => Math.min(times * 50, 2000),
+                },
             }),
         ],
         exports: [ioredis_1.RedisModule],

@@ -17,6 +17,8 @@ const reviews_module_1 = require("./reviews/reviews.module");
 const redis_service_1 = require("./cache/redis.service");
 const cache_module_1 = require("./cache/cache.module");
 const redis_module_1 = require("./redis/redis.module");
+const app_controller_1 = require("./app.controller");
+const app_service_1 = require("./app.service");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -39,7 +41,9 @@ exports.AppModule = AppModule = __decorate([
             cache_module_1.CacheModule,
             redis_module_1.RedisModule,
         ],
+        controllers: [app_controller_1.AppController],
         providers: [
+            app_service_1.AppService,
             redis_service_1.RedisService,
             {
                 provide: 'REDIS_CLIENT',

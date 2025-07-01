@@ -42,10 +42,17 @@ __decorate([
     __metadata("design:type", Date)
 ], Review.prototype, "createdAt", void 0);
 __decorate([
+    (0, swagger_1.ApiProperty)(),
+    (0, typeorm_1.Column)(),
+    __metadata("design:type", Number)
+], Review.prototype, "bookId", void 0);
+__decorate([
     (0, typeorm_1.ManyToOne)(() => book_entity_1.Book, (book) => book.reviews, { onDelete: 'CASCADE' }),
+    (0, typeorm_1.Index)(),
     __metadata("design:type", book_entity_1.Book)
 ], Review.prototype, "book", void 0);
 exports.Review = Review = __decorate([
-    (0, typeorm_1.Entity)()
+    (0, typeorm_1.Entity)(),
+    (0, typeorm_1.Index)('idx_review_bookId', ['bookId'])
 ], Review);
 //# sourceMappingURL=review.entity.js.map
